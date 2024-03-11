@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>bigbasket website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <style>
+        .class2 {
+            margin-top: 0;
+            border: 3px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            
+        }   
+        .class2 input[type="text"] {
+            padding: 8px; /* Adjust padding as needed */
+            border: none;
+            outline: none; /* Remove outline */
+            width: 200px; /* Adjust width as needed */
+            height: 30px; /* Adjust height as needed */
+        }
+        
+        .class2 input[type="text"]::placeholder {
+            color: #999;
+            width: 5cqi; /* Placeholder text color */
+        }
+        
+        .class2 button {
+            padding: 8px 15px;
+            font-size: 16px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .class1 {
+            display: flex;
+            align-items: center;
+           column-gap: 20px;
+            padding: 10px; /* Add padding for better spacing */
+            
+        }
+        .class3 button
+        {
+            padding:8px 15px;
+            font-size: 16px;
+            border:none;
+            width: 180px;
+            border-radius:15px;
+            height: 50px;
+            color:#111213db;
+            cursor:pointer;
+            border:none;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+         .class4
+         {
+           width: 30px;
+           height: 28px;
+           cursor:pointer;
+
+        }
+        header{
+     
+            height: 90px;
+            margin: 1px 100px 30px 130px;
+        }
+        nav{
+            display:flex;
+            column-gap:30px;
+            height: 90px;
+            margin: 1px 100px 30px 130px;
+        }
+
+       
+        .cart
+         {
+            margin-left: 60px; /* Move the cart icon to the right */
+        }
+        .class5
+        {
+            background-color: #f1f7f0;
+            width:200px;
+            height:30px;
+            padding: 5px;
+            border:none;
+        }
+        .slideshow-container {
+      max-width: 600px;
+      position: relative;
+      margin: auto;
+    }
+
+    .slide {
+      display: none;
+      width: 350p0x;
+      margin:0px 200px 45px -800px;
+      height: 0%;
+      ;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+      /* Optional: Add styling for controls */
+      .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 2s ease;
+      border-radius: 0 3px 3px 0;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .class6
+    {
+      display:flex;
+      column-gap:40px;
+      text-align: center;
+      margin:20px 20px 30px 580px;
+      padding:0;
+      
+    }
+    .class7
+    {
+      display:flex;
+      column-gap:60px;
+      text-align: center;
+      margin:2px 20px 30px 55px;
+      list-style:none;
+      text-align:left;
+      font-size: 12px;
+      height:300px;
+      line-height: 25px;
+      padding:0;
+      
+    }
+    ul{
+      list-style:none;
+      font-weight: normal;
+    }
+   
+.sidebar {
+  background-color: #f0f0f0;
+  padding:0;
+  flex:2;
+  width: 2px;
+  margin-left:120px;
+  margin-right:800px;
+  margin: top 3px;;
+  background-color: rgb(87, 139, 18);
+  line-height: 5px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+
+
+}
+
+.sidebar ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  color: #007bff;
+}
+
+.content {
+  padding-top: 0px;
+  flex: 2;
+}
+.container {
+  display: flex;
+  padding:0;
+}
+.product-container {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .product-image {
+            flex: 0 0 150px; /* Fixed width for the image */
+            margin-right: 20px;
+        }
+
+        .product-image img {
+            width: 100px;
+            height: auto;
+        }
+
+        .product-details {
+            flex: 1; /* Take remaining space */
+        }
+
+        .product-name {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-cost {
+            color: rgb(150, 205, 150);
+            margin-bottom: 10px;
+        }
+
+        .product-discount {
+            color: red;
+        }
+        .class8
+        {
+          margin-left: -700px;;
+        }
+    </style>
+</head>
+<body>
+    <header >
+        <div class="class1">
+            <div >
+                <img src="bigbasket.png" height="90" width="180" alt="BigBasket Logo">
+            </div>
+           
+            <div class="class2">
+                <input type="text" placeholder="Search..."  style="width:500px ;" >
+                <button><i class="fas fa-search"></i>  Search</button>
+            </div>
+            <div class="class3">
+                <button style=background-color:#ddf7b6;><i class="fas fa-map-marker-alt"></i> select location</button>
+            </div>
+            <div class="class4">
+                <button style="background-color:black ;color:white; border-radius: 10px ;width: 80px;height: 40px";><i class="fas fa-sign-in-alt"></i>login/signup</button>
+                </div>
+                <div class="cart">
+                    <a href="#"><i class="fas fa-shopping-cart"></i> </a>
+                </div>
+            </div> 
+    </header>
+    <nav>
+     <div  class="class1"></div>
+            <select name="shop by category" class="class5">
+                <option><i class="fas fa-utensils"></i>shop by category</option>
+                <option>Vegitables</option>
+                <option>Fruits</option>
+                <option>Groceries</option>
+            </select>
+            <div >
+                <button style=" width:165px;border:none;
+                height:30px;background-color: #f1f7f0 ;"><i class="fas fa-seedling"></i>Exotic Fruits & Veggies</button>
+            </div>
+            <div >
+                <button style=" width:90px;border:none;
+                height:30px;background-color: #f1f7f0 ;"> <i class="fas fa-home"></i> Home</button>
+            </div>
+            <div >
+                <button style=" width:100px;border:none;
+                height:30px;background-color: #f1f7f0 ;"> <i class="fas fa-shopping-cart"></i>Special Cart</button>
+            </div>
+            <div >
+                <button style=" width:100px;border:none;
+                height:30px;background-color: #f1f7f0 ;"><i class="fas fa-tags"></i>  Offers</button>
+            </div>
+            <div >
+                <button style=" width:100px;border:none;
+                height:30px;background-color: #f1f7f0 ;"> &#x1F356  Non-Veg</button>
+            </div>
+            <div >
+                <button style=" width:100px;border:none;
+                height:30px;background-color: #f1f7f0 ;"><i class="fas fa-info-circle"> </i> about</button>
+            </div>
+      </div> 
+    </nav>
+  <div class="container">
+    <div class="sidebar">
+      <div style="background-color:rgb(189, 161, 66);">
+      <hr>
+     
+      <h2 >GROCERY</h2>
+      <hr>
+      </div>
+      <ul style="margin:20px">
+        <li><h4><a href="#">Bevarages</a></h4></li>
+        <li><h4><a href="#">Breakfast</a></h4></li>
+        <li><h4><a href="#">Canned Food</a></h4></li>
+        <li><h4><a href="#">Hot Beverages</a></h4></li>
+        <li><h4><a href="#">Instant food</a></h4></li>
+        <li><h4><a href="#">Kitchen</a></h4></li>
+        <li><h4><a href="#">Liquor</a></h4></li>
+      </ul>
+      <div style="background-color:rgb(189, 161, 66);">
+      <hr>
+      <h2 >ORGANIC</h2>
+      <hr>
+      </div>
+      <ul style="margin:20px">
+        <li><h4><a href="#">Organic Foods</a></h4></li>
+        <li><h4><a href="#">Organic pasta</a></h4></li>
+        <li><h4><a href="#">Organic pasta sauce</a></h4></li>
+        <li><h4><a href="#">Hot Beverages</a></h4></li>
+        <li><h4><a href="#">Other Organic foods</a></h4></li>
+      </ul>
+      <div style="background-color:rgb(189, 161, 66);">
+      <hr>
+      <h2>HOME CARE</h2>
+      <hr>
+      </div>
+      <ul style="margin:20px">
+        <li><h4><a href="#">Dish Cleaning</a></h4></li>
+        <li><h4><a href="#">HOusehold</a></h4></li>
+        <li><h4><a href="#">Laundary</a></h4></li>
+        <li><h4><a href="#">Paper Products</a></h4></li>
+        <li><h4><a href="#">Instant food</a></h4></li>
+        <li><h4><a href="#">Party Wares</a></h4></li>
+      </ul>
+      <div style="background-color:rgb(189, 161, 66);">
+      <hr>
+     <h2 >PERSONAL CARE</h2>
+      <hr></div>
+      <ul style="margin:20px">
+        <li><h4><a href="#">Diet</a></h4></li>
+        <li><h4><a href="#">Calorie check</a></h4></li>
+        <li><h4><a href="#">Oral Care</a></h4></li>
+        <li><h4><a href="#">cough & Cold</a></h4></li>
+       
+      </ul>
+    </div>
+   <div class="content">
+     <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="slide">
+          <img src="slide1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+          <img src="slide2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+          <img src="slide3.jpg" alt="Slide 3">
+        </div>
+      
+        <!-- Previous and next buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      
+      <script>
+        let slideIndex = 0;
+        showSlides();
+      
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+      
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("slide");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          slides[slideIndex-1].style.display = "block";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+      </script>
+      <div sTYLE="margin:8px 5px 10px -400px;color: #034120db;">
+        <p style="font-size: large;"> POPULAR PRODUCTS</p>
+     </div>
+        <div class="class8">
+          <table>
+            <tr>
+              <td> <div class="product-container">
+                <div class="product-image">
+                    <img src="https://res.sastasundar.com/incom/images/product/Gowardhan-Pure-Cow-Ghee-1498557362-10033462.jpg"  alt="Product Image" >
+                </div>
+                <div class="product-details">
+                    <div class="Pure Ghee">Pure Ghee</div>
+                    <div class="product-cost">$20.00</div>
+                    <div class="product-discount">Discount: $5.00</div>
+                </div>
+            </div></td>
+            
+              <td> <div class="product-container">
+                <div class="product-image">
+                    <img src="https://www.lalpathlabs.com/blog/wp-content/uploads/2019/01/Fruits-and-Vegetables.jpg" >
+                </div>
+                <div class="product-details">
+                    <div class="Pure Ghee"> Fresh fruits and veggies</div>
+                    <div class="product-cost">$50.00</div>
+                    <div class="product-discount">Discount: $5.00</div>
+                </div>
+            </div>
+            </td>
+            <td> <div class="product-container">
+              <div class="product-image">
+                  <img src="https://img3.exportersindia.com/product_images/bc-full/dir_118/3519059/kirana-products-1484136889-2681911.png" >
+              </div>
+              <div class="product-details">
+                  <div class="Pure Ghee">Daily Products</div>
+                  <div class="product-cost">$90.00</div>
+                  <div class="product-discount">Discount: $5.00</div>
+              </div>
+          </div>
+          </td>
+            </tr>
+            <tr>
+              <td> <div class="product-container">
+                <div class="product-image">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.9CujmoaBdw-MsKoS-DIF2gHaFj&pid=Api&P=0&h=180" >
+                </div>
+                <div class="product-details">
+                    <div class="Pure Ghee">Dairy Products</div>
+                    <div class="product-cost">$90.00</div>
+                    <div class="product-discount">Discount: $8.00</div>
+                </div>
+            </div>
+            </td>
+            <td> <div class="product-container">
+              <div class="product-image">
+                  <img src="https://2.bp.blogspot.com/-RtojS5qNa-w/WjDevpqZLMI/AAAAAAAAJxA/p0Kkbu9_mc4NmG5bh00zJhi6Gh2uEsvTwCK4BGAYYCw/s1600/DiMe%2BMedia%2BJoin%2BUs%2Bfor%2Bthe%2B%2523DisfrutaTuHogar%2BTwitter%2BParty%2B...-789858.jpg" >
+              </div>
+              <div class="product-details">
+                  <div class="Pure Ghee">cleaning & household products </div>
+                  <div class="product-cost">$70.00</div>
+                  <div class="product-discount">Discount: $8.00</div>
+              </div>
+          </div>
+          </td>
+          <td> <div class="product-container">
+            <div class="product-image">
+                <img src="https://cdn.dribbble.com/users/2073894/screenshots/13486402/media/eac9dbf93292e11e73a6f138873c0515.jpg" >
+            </div>
+            <div class="product-details">
+                <div class="Pure Ghee">Cometic Products </div>
+                <div class="product-cost">$80.00</div>
+                <div class="product-discount">Discount: $8.00</div>
+            </div>
+        </div>
+        </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="product-container">
+                  <div class="product-image">
+                      <img src="https://i.pinimg.com/736x/ee/74/2f/ee742f0d7bfce3168713f438a3e3139b--convenience-store-foodies.jpg" >
+                  </div>
+                  <div class="product-details">
+                      <div class="Pure Ghee">Snacks Store </div>
+                      <div class="product-cost">$10.00</div>
+                      <div class="product-discount">Discount: $2.00</div>
+                  </div>
+              </div>
+              </td>
+              <td>
+                <div class="product-container">
+                  <div class="product-image">
+                      <img src="https://ebcatering.com/usercontent/product_sub_img/menuitem_Beverages.jpg" >
+                  </div>
+                  <div class="product-details">
+                      <div class="Pure Ghee">Beverages </div>
+                      <div class="product-cost">$30.00</div>
+                      <div class="product-discount">Discount: $5.00</div>
+                  </div>
+              </div>
+              </td>
+              <td>
+                <div class="product-container">
+                  <div class="product-image">
+                      <img src="https://chikplaza.com/wp-content/uploads/2017/09/Mutton-Mix-Assorted-Curry-Cut_STP3627-1.jpg" >
+                  </div>
+                  <div class="product-details">
+                      <div class="Pure Ghee">Meat</div>
+                      <div class="product-cost">$90.00</div>
+                      <div class="product-discount">Discount: $9.00</div>
+                  </div>
+              </div>
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+    </div>
+    
+    </div>
+  </div> 
+  
+  <footer >
+
+    <div class="class6" style="line-height: 75px;">
+      <div>
+      <i class="fab fa-facebook"></i>
+      </div>
+      <div>
+      <i class="fab fa-instagram"></i>
+     </div>
+     <div>
+      <i class="fab fa-twitter"></i>
+      </div>
+      <div>
+      <i class="fab fa-youtube"></i>
+      </div>
+      <div>
+      <i class="fab fa-linkedin"></i>
+     </div>
+    </div>
+     <div class="class7" style="background-color: rgb(64, 45, 45);color:white">
+      <ul>
+         <h3>SOCIAL</h3>
+        <li>Facebook</li>
+        <li>youtube</li>
+      </ul>
+      <ul>
+          <h3>SERVICE<h3>
+          <li>Compare</li>
+          <li>Download</li>
+          <li>Feedback</li>
+          <li>Bug Report</li>
+      </ul>
+      <ul>
+         <h3>ACTIVITY</h3>
+         <li>Influencers</li>
+         <li>Affiliate</li>
+         <li>Co-branding</li>
+         <li>Honour</li>
+         <li>Giveaway</li>
+        </ul>
+        
+        <div style="position:bottom;padding:0;">
+          <p style="position:center; text-align:center;background-color: rgb(64, 45, 45);color:white;">Copyright &#169;2018 DOOGE.All rights reserved</p>
+        </div>
+        <div>
+          <ul><pre>  </pre></ul>
+          <ul><pre>  </pre></ul>
+          <ul>
+            <h2>Subscribe to Our Newsletter</h2></ul>
+            <ul>
+                <form action="/subscribe" method="post">
+                   <input type="email" name="email" placeholder="Enter your email address" required>
+                   <button type="submit" style="background-color: rgb(229, 25, 25);">Subscribe</button>
+                </form>
+            </ul>
+        </div>
+      </div>
+  </footer>
+</body>
+</html>
